@@ -1,12 +1,12 @@
 ##  CLaRa: Unified Retrieval-Augmented Generation with Compression
 
-[![Paper](https://img.shields.io/badge/Paper-Arxiv%20Link-green)](https://arxiv.org/abs/XXXX.XXXXX) [![License](https://img.shields.io/badge/License-Apple-blue)](LICENSE) [![deploy](https://img.shields.io/badge/Hugging%20Face-CLaRa_Base-FFEB3B)](https://huggingface.co/your-org/clara-base) [![deploy](https://img.shields.io/badge/Hugging%20Face-CLaRa_Instruct-FFEB3B)](https://huggingface.co/your-org/clara-instruct) [![deploy](https://img.shields.io/badge/Hugging%20Face-CLaRa_End_to_end-FFEB3B)](https://huggingface.co/your-org/clara-e)
+[![Paper](https://img.shields.io/badge/Paper-Arxiv%20Link-green)](https://arxiv.org/abs/XXXX.XXXXX) [![License](https://img.shields.io/badge/License-Apple-blue)](LICENSE) [![deploy](https://img.shields.io/badge/Hugging%20Face-CLaRa_Base-FFEB3B)](https://huggingface.co/probejie/CLaRa-Base) [![deploy](https://img.shields.io/badge/Hugging%20Face-CLaRa_Instruct-FFEB3B)](https://huggingface.co/probejie/CLaRa-Instruct) [![deploy](https://img.shields.io/badge/Hugging%20Face-CLaRa_End_to_end-FFEB3B)](https://huggingface.co/probejie/CLaRa-E2E)
 
 This software project accompanies the research paper, **CLaRa: Unified Retrieval-Augmented Generation with Compression**.
 
 ### Updates
 
-- **Coming soon**: Model checkpoints.
+- Nov 25, 2025. Models are available on Huggingface.
 
 ### Motivation
 
@@ -314,11 +314,6 @@ Supported datasets:
 - **2WikiMultiHopQA**: Multi-hop question answering over Wikipedia
 - **Natural Questions**: Open-domain question answering
 
-### Model Checkpoints
-
-Pre-trained CLaRa model checkpoints will be available on Hugging Face:
-
-🤗 **[Coming Soon]** CLaRa checkpoints on Hugging Face Hub
 
 
 ### Results
@@ -382,14 +377,13 @@ We sincerely appreciate the following works for CLaRa:
 ## Citation
 
 ```bibtex
-@article{clara2024,
-  title={CLaRa: Unified Retrieval-Augmented Generation with Compression},
-  author={[Authors]},
-  journal={[Journal]},
-  year={2024},
-  eprint={XXXX.XXXXX},
-  archivePrefix={arXiv},
-  primaryClass={cs.CL},
-  url={https://arxiv.org/abs/XXXX.XXXXX}
+@misc{he2025clarabridgingretrievalgeneration,
+      title={CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning}, 
+      author={Jie He and Richard He Bai and Sinead Williamson and Jeff Z. Pan and Navdeep Jaitly and Yizhe Zhang},
+      year={2025},
+      eprint={2511.18659},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2511.18659}, 
 }
 ```
