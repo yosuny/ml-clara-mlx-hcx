@@ -7,8 +7,10 @@ This software project accompanies the research paper, **CLaRa: Bridging Retrieva
 
 ### Updates
 
-- Nov 25, 2025. Models are available on Huggingface.
+- Dec 10, 2025. We are working on an MLX version of the model, to be announced soon.
 - Dec 3, 2025. Evaluation data are available in `./evaluation/evaluation_data`.
+- Nov 25, 2025. Models are available on Huggingface.
+
 
 ### Motivation
 
@@ -82,6 +84,7 @@ In this repository, we release our implementation of **CLaRa**, built upon [Open
 ```
 
 Video instruction for installation (from @Fahd Mirza): https://youtu.be/al2VoAKn8GU?si=Q8bq7QNMaTvcArwa
+Video digest (from @Richard Aragon): https://www.youtube.com/watch?v=yRM92mmKNH4
 
 #### 1. Prepare code and environment
 
