@@ -1,12 +1,23 @@
 ##  CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning
 
+<div align="center">
+  <img src="figs/clara_logo.jpg" width="300"/>
+</div>
 
-[![Paper](https://img.shields.io/badge/Paper-Arxiv%20Link-green)](https://arxiv.org/abs/2511.18659) [![License](https://img.shields.io/badge/License-Apple-blue)](LICENSE) [![deploy](https://img.shields.io/badge/Hugging%20Face-CLaRa_Base-FFEB3B)](https://huggingface.co/apple/CLaRa-7B-Base) [![deploy](https://img.shields.io/badge/Hugging%20Face-CLaRa_Instruct-FFEB3B)](https://huggingface.co/apple/CLaRa-7B-Instruct) [![deploy](https://img.shields.io/badge/Hugging%20Face-CLaRa_End_to_end-FFEB3B)](https://huggingface.co/apple/CLaRa-7B-E2E)
+<div align="center">
+  <a href="https://arxiv.org/abs/2511.18659"><img src="https://img.shields.io/badge/arXiv-2511.18659-b31b1b.svg" alt="arXiv"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apple-blue" alt="License"></a>
+  <a href="https://huggingface.co/apple/CLaRa-7B-Base"><img src="https://img.shields.io/badge/Hugging%20Face-CLaRa_Base-FFEB3B" alt="deploy"></a>
+  <a href="https://huggingface.co/apple/CLaRa-7B-Instruct"><img src="https://img.shields.io/badge/Hugging%20Face-CLaRa_Instruct-FFEB3B" alt="deploy"></a>
+  <a href="https://huggingface.co/apple/CLaRa-7B-E2E"><img src="https://img.shields.io/badge/Hugging%20Face-CLaRa_End_to_end-FFEB3B" alt="deploy"></a>
+  <a href="https://huggingface.co/apple/CLaRa-7B-Data"><img src="https://img.shields.io/badge/Hugging%20Face-CLaRa_Data-FFEB3B" alt="data"></a>
+</div>
 
-This software project accompanies the research paper, **CLaRa: Bridging Retrieval and Generation with Continuous Latent Reasoning**.
+This is the official open-source release of CLaRa, a state-of-the-art, end-to-end Retrieval-Augmented Generation model.
 
 ### Updates
 
+- Dec 11, 2025. All used data are available on Huggingface. 
 - Dec 10, 2025. We are working on an MLX version of the model, to be announced soon.
 - Dec 3, 2025. Evaluation data are available in `./evaluation/evaluation_data`.
 - Nov 25, 2025. Models are available on Huggingface.
