@@ -10,7 +10,7 @@
   <a href="https://huggingface.co/apple/CLaRa-7B-Base"><img src="https://img.shields.io/badge/Hugging%20Face-CLaRa_Base-FFEB3B" alt="deploy"></a>
   <a href="https://huggingface.co/apple/CLaRa-7B-Instruct"><img src="https://img.shields.io/badge/Hugging%20Face-CLaRa_Instruct-FFEB3B" alt="deploy"></a>
   <a href="https://huggingface.co/apple/CLaRa-7B-E2E"><img src="https://img.shields.io/badge/Hugging%20Face-CLaRa_End_to_end-FFEB3B" alt="deploy"></a>
-  <a href="https://huggingface.co/apple/CLaRa-7B-Data"><img src="https://img.shields.io/badge/Hugging%20Face-CLaRa_Data-FFEB3B" alt="data"></a>
+  <a href="https://huggingface.co/apple/CLaRa-multi-stage"><img src="https://img.shields.io/badge/Hugging%20Face-CLaRa_Data-FFEB3B" alt="data"></a>
 </div>
 
 This is the official open-source release of CLaRa, a state-of-the-art, end-to-end Retrieval-Augmented Generation model.
