@@ -95,7 +95,7 @@ class DeepspeedStrategy(ABC):
             os.environ["LOCAL_RANK"] = str(self.args.local_rank)
 
         local_rank = int(os.environ.get("LOCAL_RANK", "-1"))
-        if local_rank != -1:
+        if local_rank != -1 and torch.cuda.is_available():
             torch.cuda.set_device(local_rank)
 
         # Initializes the distributed backend which will take care of sychronizing nodes/GPUs
@@ -105,7 +105,7 @@ class DeepspeedStrategy(ABC):
         self.world_size = dist.get_world_size()
         dp_size = self.world_size // self.ring_attn_size // self.ds_tensor_parallel_size
         self.ds_device_mesh = init_device_mesh(
-            "cuda", (dp_size, self.ring_attn_size, self.ds_tensor_parallel_size), mesh_dim_names=("dp", "sp", "tp")
+            "cuda" if torch.cuda.is_available() else "cpu", (dp_size, self.ring_attn_size, self.ds_tensor_parallel_size), mesh_dim_names=("dp", "sp", "tp")
         )
         self.setup_ring_attn(self.ds_device_mesh)
 

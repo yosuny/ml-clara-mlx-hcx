@@ -1,0 +1,27 @@
+[
+  {
+    "question": "What is CLaRa and what problem does it solve?",
+    "answer": "<|vision21589|><|vision00691|><|vision34891|><|vision11306|><|vision00691|><|vision34891|><|vision30222|><|vision34891|><|vision30222|><|vision34891|><|vision30222|><|vision34891|><|vision30222|><|vision34891|><|vision30222|><|vision34891|><|vision30222|><|vision34891|><|vision30222|><|vision30222|><|vision30222|><|vision08524|><|vision08524|><|vision08524|><|vision08524|><|vision08524|><|vision08524|><|vision08524|><|vision08524|><|vision08524|><|vision08524|><|vision08524|><|vision08524|><|vision08524|><|vision08524|><|vision08524|><|vision08524|><|vision08524|><|vision08524|><|vision08524|>\n<|vision11306|><|vision00691|><|vision00691|><|vision00691|><|vision00691|><|vision00691|><|vision00691|><|vision00691|><|vision00691|>",
+    "gold": ""
+  },
+  {
+    "question": "How many memory tokens does CLaRa use per document?",
+    "answer": " 10 7 2 7 7 2's 8 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7 7",
+    "gold": ""
+  },
+  {
+    "question": "What are the three training stages of CLaRa?",
+    "answer": "<|vision21589|><|vision30222|><|vision30222|><|vision30222|> <|vision21589|><|vision21589|><|vision30222|>  <|vision13999|><|vision30222|> <|vision20234|> <|vision28958|><|vision48159|><|vision16778|> <|vision20234|> <|vision00195|> <|vision36138|> <|vision48159|><|vision16778|><|vision16778|><|vision16778|><|vision16778|><|vision16778|><|vision16778|><|vision16778|><|vision16778|><|vision16778|>  <|vision28660|> 1 <|vision36138|> <|vision19363|> 1 1 1",
+    "gold": ""
+  },
+  {
+    "question": "What loss functions are used in CLaRa Stage 1 training?",
+    "answer": "<|vision49718|><|vision49718|><|vision49718|><|vision49718|><|vision49718|><|vision49718|><|vision30858|><|vision30222|><|vision30222|><|vision25299|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|><|vision30222|>",
+    "gold": ""
+  },
+  {
+    "question": "How does CLaRa differ from standard RAG systems?",
+    "answer": "7 <|vision21589|><|vision19346|> <|vision49718|>3<|vision49718|>3 <|vision49718|>3 <|vision49718|>3 <|vision49718|>3 <|vision49718|>3 <|vision49718|>3 <|vision49718|>3 <|vision49718|>3 <|vision49718|>3 307{ 30777777p3 ",
+    "gold": ""
+  }
+]

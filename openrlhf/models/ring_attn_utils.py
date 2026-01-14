@@ -1,7 +1,14 @@
 import torch
 import torch.distributed as dist
-from flash_attn.bert_padding import index_first_axis, pad_input, rearrange, unpad_input
-from flash_attn.utils.distributed import all_gather
+try:
+    from flash_attn.bert_padding import index_first_axis, pad_input, rearrange, unpad_input
+    from flash_attn.utils.distributed import all_gather
+except ImportError:
+    def index_first_axis(*args, **kwargs): raise NotImplementedError("flash_attn not installed")
+    def pad_input(*args, **kwargs): raise NotImplementedError("flash_attn not installed")
+    def rearrange(*args, **kwargs): raise NotImplementedError("flash_attn not installed")
+    def unpad_input(*args, **kwargs): raise NotImplementedError("flash_attn not installed")
+    def all_gather(*args, **kwargs): raise NotImplementedError("flash_attn not installed")
 
 RING_ATTN_GROUP = None
 
@@ -54,7 +61,12 @@ def update_ring_attn_params(cu_seqlens):
     update_ring_flash_attn_params(cu_seqlens, RING_ATTN_GROUP)
 
 
-def get_tensor_in_current_ring_attn_rank(tensors: list[torch.Tensor] | torch.Tensor, ring_attn_group, pad_id):
+try:
+    from typing import Union
+except ImportError:
+    pass
+
+def get_tensor_in_current_ring_attn_rank(tensors: Union[list[torch.Tensor], torch.Tensor], ring_attn_group, pad_id):
     """
     Deal with padding and slice the tensor to current ring_attn_rank.
     Args:

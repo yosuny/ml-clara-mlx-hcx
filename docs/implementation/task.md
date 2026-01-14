@@ -1,0 +1,57 @@
+# Project Analysis for User Explanation
+
+- [x] Analyze `README.md` for project overview and workflow <!-- id: 0 -->
+- [x] Explore `scripts` and source directories to understand technical details <!-- id: 1 -->
+- [x] Synthesize information and explain tasks step-by-step to the user <!-- id: 2 -->
+- [x] Check compatibility with HCX omni 8B quantized model <!-- id: 3 -->
+- [x] Analyze SCP compressor architecture dependency <!-- id: 4 -->
+- [x] Create `scripts/train_pretraining_hcx.sh` with correct model and data paths <!-- id: 5 -->
+- [x] Set up `venv` and install dependencies for Mac <!-- id: 6 -->
+- [x] Run `scripts/train_pretraining_hcx.sh` <!-- id: 7 -->
+  - [x] Fix Mac network/process compatibility (GloO, single-process)
+  - [x] Fix DeepSpeed/FlashAttn dependencies
+  - [x] Attempt 4-bit loading (Failed: missing/incompatible config)
+  - [x] Attempt 8-bit loading (Failed: weight shape mismatch 1024 vs 4096)
+- [x] Create Apple Silicon improvement proposal (`improvement_proposal.md`) <!-- id: 9 -->
+- [x] Create MLX migration plan (`mlx_migration_plan.md`) <!-- id: 10 -->
+- [x] **Phase 1**: Verify Existing MLX Model (Correction: No conversion needed) <!-- id: 11 -->
+- [x] **Phase 2**: Port CLaRa Architecture to MLX <!-- id: 12 -->
+- [x] **Phase 1**: Verify Existing MLX Model (Correction: No conversion needed) <!-- id: 11 -->
+- [x] **Phase 2**: Port CLaRa Architecture to MLX <!-- id: 12 -->
+- [x] **Phase 3**: Implement MLX Training Loop (Compression Only) <!-- id: 13 -->
+- [x] **Phase 4**: Data Integration (PDF Training) <!-- id: 14 -->
+    - [x] Extract text from `knowledge_data/2511.18659v2.pdf` <!-- id: 15 -->
+    - [x] Update `train_mlx.py` to load and tokenize text data <!-- id: 16 -->
+    - [x] Run training with extracted knowledge <!-- id: 17 -->
+- [x] **Phase 5**: SFT Training Loop (QA + Compression) <!-- id: 18 -->
+    - [x] Update `modeling_clara_mlx.py` with unified forward pass <!-- id: 19 -->
+    - [x] Create `train_sft_mlx.py` with QA+MSE loss <!-- id: 20 -->
+    - [x] Run verification with end-to-end data <!-- id: 21 -->
+- [x] **Phase 6**: Model Evaluation (Original vs Tuned) <!-- id: 22 -->
+    - [x] Create evaluation questions (20 CLaRa paper questions) <!-- id: 23 -->
+    - [x] Implement RAG evaluation script <!-- id: 24 -->
+    - [x] Implement tuned model evaluation script <!-- id: 25 -->
+    - [x] Run evaluations and generate comparison report <!-- id: 26 -->
+    - [x] Identify evaluation issues (weights not loaded, compression-only training) <!-- id: 27 -->
+
+## Complete CLaRa Training Pipeline (3-Stage)
+
+- [x] **Phase 7**: Stage 1 - Compression Pretraining (Complete) <!-- id: 28 -->
+    - [x] Collect diverse document corpus (10K-100K docs) <!-- id: 29 -->
+    - [x] Add LM loss to compression training <!-- id: 30 -->
+    - [x] Retrain with MSE + LM loss <!-- id: 31 -->
+    - [x] Save compressor weights <!-- id: 32 -->
+- [x] **Phase 8**: Stage 2 - SFT with Compressed Vectors <!-- id: 33 -->
+    - [x] Prepare QA dataset (Natural Questions or auto-generate) <!-- id: 34 -->
+    - [x] Implement compressed vector input handling <!-- id: 35 -->
+    - [x] Train generator with frozen compressor <!-- id: 36 -->
+    - [x] Save generator weights <!-- id: 37 -->
+- [x] **Phase 9**: Stage 3 - End-to-End Joint Training <!-- id: 38 -->
+    - [x] Implement Dense Retriever <!-- id: 39 -->
+    - [x] Create integrated pipeline (retrieve → compress → generate) <!-- id: 40 -->
+    - [x] Implement joint loss (retrieval + generation + compression) <!-- id: 41 -->
+    - [x] Train full system end-to-end <!-- id: 42 -->
+- [x] **Phase 10**: Final Evaluation <!-- id: 43 -->
+    - [x] Evaluate all stages separately <!-- id: 44 -->
+    - [x] Compare: Baseline vs Stage1 vs Stage1+2 vs Full CLaRa <!-- id: 45 -->
+    - [x] Generate performance analysis report <!-- id: 46 -->

@@ -48,6 +48,7 @@ def create_clara_config(args: argparse.Namespace) -> CLaRaConfig:
         training_stage=args.stage,
         sep=True,
         attn_implementation='flash_attention_2',
+        quantization=args.quantization,
         stage2_retrieval_top_n=args.stage2_retrieval_top_n,
         pure_inference=args.pure_inference
     )
@@ -248,6 +249,8 @@ def create_argument_parser() -> argparse.ArgumentParser:
     model_group.add_argument("--stage", type=str, default="stage1", choices=["stage1", "stage1_2", "stage2", "stage2_reasoning"],
                            help="Training stage")
     model_group.add_argument("--generation_top_k", type=int, default=1, help="Top-k for generation")
+    model_group.add_argument("--quantization", type=str, default="no", choices=["no", "int4", "int8"], 
+                           help="Quantization mode (no, int4, int8)")
     model_group.add_argument("--pure_inference", action="store_true", default=False, 
                            help="Pure inference mode")
 
